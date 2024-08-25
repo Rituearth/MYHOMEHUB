@@ -1,0 +1,549 @@
+
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MY homeHUB</title><style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-image: url('bggg.png');
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    .logo {
+        display: inline-block;
+        padding: 10px 0;
+    }
+    .logo svg {
+        height: 40px;
+    }
+    nav {
+        float: right;
+        padding: 20px 0;
+    }
+    nav a {
+        color: #333;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #007bff;
+    }
+
+    .hero {
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+    }
+    .hero-content {
+        background-color: rgba(84, 83, 83, 0.5);
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #0c0c0c;
+    }
+    section {
+        padding: 60px 0;
+    }
+    #flats.container{
+        background-color: #7D13AB;
+    }
+    .flats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.flat-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.flat-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.flat-card:hover img {
+    transform: scale(1.05);
+}
+
+.flat-card-content {
+    padding: 20px;
+}
+    .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#amenities.container{
+    background-color: #7D13AB;
+}
+
+.amenity {
+    text-align: center;
+    width: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.amenity:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+}
+
+.amenity svg {
+    width: 50px;
+    height: 50px;
+    fill: #fafafa;
+    transition: fill 0.3s ease;
+}
+
+.amenity:hover svg {
+    fill: #000000;
+}
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+    .gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+    .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(249, 249, 249, 0.1);
+}
+#gallery.container {
+    height: 700px; /* Increase the height */
+    /*padding: 30px; /* Adjust padding as needed */
+}
+#gallery.container {
+    background-color: #7D13AB; /* Increase the height */
+    /*padding: 30px; /* Adjust padding as needed */
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+#contact.container {
+    background-color: #7D13AB;
+}
+
+#contact.container {
+    height: 500px; /* Set a specific height */
+     /* Adjust padding as needed */
+}
+#contact.container {
+    color: #ffffff; /* Change this to the desired text color */
+}
+
+.contact-form button {
+    background-color: #2200fc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Default background color */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #000000; /* Background color on hover */
+    transform: scale(1.1); /* Enlarge the button slightly on hover */
+}
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #080808;
+    transition:  0.6s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #4CAF50;
+}
+.interactive-footer .container {
+    background-color: rgba(237, 237, 237, 0);
+}
+.interactive-footer {
+    background: #7D13AB;
+    color: #fefefe;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.interactive-footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.social-icon svg {
+    width: 50px;
+    height: 50px;
+}
+
+.facebook svg {
+    color: #1877f2;
+}
+
+.instagram svg {
+    color: #e4405f;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #52dc0d;
+    text-decoration: underline;
+}
+#ere.container
+{
+    background-color: #F9DBBA;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container" id="ere">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 100 50" width="250" height="50">
+                    <rect x="10" y="10" width="30" height="30" fill="#007bff"/>
+                    <text x="50" y="35" font-family="Arial" font-size="24" fill="#333">MyHomeHUB</text>
+                </svg>
+            </a>
+            <nav>
+                <a href="#intro">About</a>
+                <a href="#flats">Flats</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <style>
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .hero-content:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.7);
+
+        }
+        .hero.container{
+            background-color: #7D13AB;
+        }
+        </style>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Luxury Living in the Heart of the City</h1>
+                <a href="#flats" class="btn">View Available Flats</a>
+            </div>
+        </section>
+        
+
+
+
+        <section id="flats" class="container">
+            <h2>Available Flats</h2>
+            <div class="flats">
+                <div class="flat-card">
+                    <img src="p1.jpeg" alt="Interior of Flat A1, modern living room with large windows" width="400" height="300">
+                    <div class="flat-card-content">
+                        <h3>Flat A1</h3>
+                        <p>Spacious 2-bedroom apartment with panoramic city views. 1,200 sq ft.</p>
+                        <a href="/flats/a1" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="flat-card">
+                    <img src="p2.jpeg" alt="Interior of Flat B2, elegant kitchen with modern appliances" width="400" height="300">
+                    <div class="flat-card-content">
+                        <h3>Flat B2</h3>
+                        <p>Cozy 1-bedroom flat with a stylish open-plan layout. 800 sq ft.</p>
+                        <a href="/flats/b2" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="flat-card">
+                    <img src="p3.jpeg" alt="Interior of Flat C3, luxurious master bedroom with en-suite bathroom" width="400" height="300">
+                    <div class="flat-card-content">
+                        <h3>Flat C3</h3>
+                        <p>Luxurious 3-bedroom penthouse with private terrace. 2,000 sq ft.</p>
+                        <a href="/flats/c3" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="amenities" class="container">
+        <h2>Amenities</h2>
+        <div class="amenities">
+            <div class="amenity">
+                <svg viewBox="0 0 24 24"><path d="M12 5C15.79 5 19 8.21 19 12C19 15.79 15.79 19 12 19C8.21 19 5 15.79 5 12C5 8.21 8.21 5 12 5M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2M12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4M11 7H13V13H11V7M11 15H13V17H11V15Z"/></svg>
+                <p>24/7 Security</p>
+            </div>
+            <div class="amenity">
+                <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43L20.57 12L17 15.57L8.43 7L12 3.43L10.57 2L9.14 3.43L7.71 2L5.57 4.14L4.14 2.71L2.71 4.14L4.14 5.57L2 7.71L3.43 9.14L2 10.57L3.43 12L7 8.43L15.57 17L12 20.57L13.43 22L14.86 20.57L16.29 22L18.43 19.86L19.86 21.29L21.29 19.86L19.86 18.43L22 16.29L20.57 14.86Z"/></svg>
+                <p>Fitness Center</p>
+            </div>
+            <div class="amenity">
+                <svg viewBox="0 0 24 24"><path d="M22 21C22 21.55 21.55 22 21 22H3C2.45 22 2 21.55 2 21V11H22V21M12 3C13.66 3 15 4.34 15 6C15 7.66 13.66 9 12 9C10.34 9 9 7.66 9 6C9 4.34 10.34 3 12 3M11 11V13H13V11H11V7M7 11V13H9V11H7M15 11V13H17V11H15Z"/></svg>
+                <p>Swimming Pool</p>
+            </div>
+            <div class="amenity">
+                <svg viewBox="0 0 24 24"><path d="M5,3V21H11V17.5H13V21H19V3H5M7,5H9V7H7V5M11,5H13V7H11V5M15,5H17V7H15V5M7,9H9V11H7V9M11,9H13V11H11V9M15,9H17V11H15V9M7,13H9V15H7V13M11,13H13V15H11V13M15,13H17V15H15V13M7,17H9V19H7V17M15,17H17V19H15V17Z"/></svg>
+                <p>Rooftop Lounge</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="p4.jpeg" alt="Luxurious living room with city view" width="400" height="300">
+            <img src="p5.jpeg" alt="Modern kitchen with high-end appliances" width="400" height="300">
+            <img src="p6.jpeg" alt="Spacious bedroom with en-suite bathroom" width="400" height="300">
+            <img src="p7.jpeg" alt="Rooftop swimming pool with lounge area" width="400" height="300">
+            <img src="p8.jpeg" alt="State-of-the-art fitness center" width="400" height="300">
+            <img src="p9.jpeg" alt="Elegant lobby with 24/7 concierge" width="400" height="300">
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="/submit-inquiry" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" id="phone" required>
+                    <label for="phone">Your Phone Number</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+        
+
+ 
+
+    <footer class="interactive-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://facebook.com/luxeliving" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/luxeliving" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Myhome HUB Apartments. All rights reserved.</p>
+                    <p class="footer-links">
+                        <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function initMap() {
+            const luxeLiving = { lat: 40.7128, lng: -74.0060 }; // Example coordinates for New York City
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: luxeLiving
+            });
+            const marker = new google.maps.Marker({
+                position: luxeLiving,
+                map: map,
+                title: 'My HomeHUB Apartments'
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple lightbox for gallery images
+        const galleryImages = document.querySelectorAll('.gallery img');
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                const lightbox = document.createElement('div');
+                lightbox.id = 'lightbox';
+                document.body.appendChild(lightbox);
+
+                const bigImage = document.createElement('img');
+                bigImage.src = this.src;
+                lightbox.appendChild(bigImage);
+
+                lightbox.addEventListener('click', e => {
+                    if (e.target !== e.currentTarget) return;
+                    lightbox.remove();
+                });
+            });
+        });
+    </script>
+</body></html>
